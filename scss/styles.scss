@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* CSS (styles.css) */
+
+$dark-blue:                #204056;
+$light-blue:               #59A1C9;
+$aqua:                     #39D1B4;
+$salmon:                   #F65A5B;
+
+// Grayscale
+$white:                    #fff;
+$black:                    #000;
+$black-10:                 darken(#fff, 10%);
+$black-20:                 darken(#fff, 20%);
+$black-30:                 darken(#fff, 30%);
+$black-40:                 darken(#fff, 40%);
+$black-50:                 darken(#fff, 50%);
+$black-60:                 darken(#fff, 60%);
+$black-70:                 darken(#fff, 70%);
+$black-80:                 darken(#fff, 80%);
+$black-90:                 darken(#fff, 90%);
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor1: #434C6B;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+header {
+  background-color: white;
+  padding: 20px 0;
+  
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.nav-buttons ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15em;
+}
+
+.nav-buttons li {
+  position: relative;
+  display: inline;
+  font-size: 1.5em;
+
+}
+
+.nav-buttons li::before{
+    position: absolute;
+    content:"";
+    height: 3px;
+    background: var(--primaryColor1);
+    top: 1.2em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: ease-in-out 200ms;
+
+
+}
+
+.nav-buttons li:hover::before {
+  transform: scale(1, 1);
+  transform-origin:left;
+
+}
+
+
+
+.nav-buttons a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+
+
+#about-me {
+  display:flex;
+  border-radius:5px;
+  margin: 20px 0px 0px 0px;
+}
+
+#my-photo {
+  width:30vw;
+  height: 30vw;
+  object-fit:cover;
+  border-radius:50%;
+  margin: 0px 45px 0px 45px;
+
+}
+
+#about-me-text {
+  font-size:1.3em;
+}
+
+// .flair {
+//   margin-top:10em;
+//   width: 100%;
+//   height: 30px;
+//   border-style: solid;
+//   border-color: hsla(0, 0%, 75%, 0.9);
+//   border-width: 1px 0 0 0;
+// }
+// .flair::before {
+//   content: 'A';
+//   display: block;
+//   height: 30px;
+//   width: 100%;
+//   margin-top: -31px;    
+//   border-style: solid;
+//   border-color: hsla(0, 0%, 75%, 0.9);
+//   border-width: 0 0 1px 0;
+//   border-radius: 0 0 15px 15px;
+// }
+
+#featured-project-section {
+  background-color: var(--primaryColor1);
+  padding: 1em 0px 1em 0px;
+  margin: 3em 0 0 0;
+
+}
+
+#featured-project-section-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color:white;
+}
+
+.featured-project-container {
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+
+}
+
+.featured-project {
+  position: relative;
+  border-radius:30px;
+  background-color: white;
+  width: 25vw;
+  height: 25vw;
+  margin: 3em 0 3em 0; 
+  transition: ease-in 150ms;
+}
+.featured-project-text{
+  position: absolute; /* Position the text absolutely within the box */
+    top:-20px;
+    left: 50%; /* Center the text horizontally within the box */
+    transform: translateX(-125%); /* Center the text horizontally */
+    font-size: 18px;
+    color: #333;
+    background-color: #fff; /* Optional: background for better readability */
+    padding: 5px; /* Optional: padding around the text */
+    border-radius: 30px; /* Optional: rounded corners for the text background */
+}
+
+.featured-project:hover{
+    box-shadow: 5px 5px 5px 5px rgb(0,0,0,.3);
+}
+
+.footer {
+  position:relative;
+  min-width: 100vw;
+  min-height: 30vw;
+  background-color: var(--primaryColor1);
+  margin-top: 5em;
+}
+
+.footer .footer-name {
+  position: absolute;
+  top: 4em;
+  font-size:30px;
+  right: 3em;
+
+}
+.social-buttons {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin-top: 10px;
+  gap: 5px;
+
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #742828;
+  color: white;
+}
+
+.fa-github {
+  background: #742828;
+  color: white;
+}
+
+
+/* Project Page */
+.project-card-container {
+  margin-top: 3em; 
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+  align-items: center;
+}
+
+
+.project-card-wrapper {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 40vw;
+  width: 65vw;
+  position: relative;
+  background-color: #E6E6E6;
+  border-radius:10px;
+  box-shadow: 5px 5px 5px 5px rgb(0,0,0,.3);
+  transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+
+
+.project-card > img {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+.arrows {
+  display: flex;
+  align-items:center;
+}
+
+
+.prev-arrow, .next-arrow {
+  color: #282828;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Ensure the font size is appropriate for the button size */
+  opacity:0;
+  transition: transform 100ms ease-in;
+}
+
+.prev-arrow {
+  position:absolute;
+  left:1px;
+}
+
+
+.next-arrow {
+  position:absolute;
+  right:1px;
+}
+.project-card-wrapper:hover .prev-arrow {
+  opacity: 1;
+  transform: translate(50%);
+}
+
+.project-card-wrapper:hover .next-arrow {
+  opacity:1;
+  transform: translate(-50%);
+} 
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.head-text {
+  position: relative;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.project-text-heading::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 2em;
+  background-color: var(--primaryColor1);
+  left:-2.2em;
+  bottom: .5em;
+
+}
+
+#project-text {
+  margin-left:16vw;
+  margin-bottom: 75px;
+}
+
+.sub-text {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 822px) {
+  .footer {
+    position:relative;
+    width: 100vw;
+    height: 20vw;
+    background-color: var(--primaryColor1);
+    margin-top: 5em;
+  }
+  
+  .footer .footer-name {
+    position: absolute;
+    top: 5em;
+    font-size:30px;
+    right: 3em;
+  
+  }
+
+}
+
+
+/*Coursework Page*/
+.coursework-nav {
+  height: 100vh;
+  width: 18vw;
+  background: #E6E6E6;
+  border-radius: 10px;
+  display:flex;
+  flex-direction:column;
+  padding: 20px;
+  gap: 3em;
+  
+
+  // &:hover {
+  //   background-color:black;
+  // }
+}
+
+a {
+  text-decoration: none; /* no underline */
+  color: #282828;
+
+}
+
+.nav {
+
+  &-link {
+    display:flex;
+    align-items:center;
+    padding: 8px;
+    gap: 7px;
+    position: relative;
+
+
+    &:hover {
+      background-color: white;
+      border-radius:10px;
+    }
+
+  }
+
+  &-dropdown-content{
+    display:flex;
+    flex-direction: column;
+    margin-left: 16px;
+    margin-top: 3px;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 250ms ease-in-out;
+    
+  }
+
+  &-dropdown-icon {
+    transition: ease-in-out 150ms;
+  }
+
+  &-dropdown-item {
+    padding: 8px;
+    transition: ease-in 100ms;
+
+    &:hover {
+      background-color: white;
+      border-radius:10px;
+    }
+  } 
+
+}
+
+.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease-in-out;
+}
+
+.icon-rotated {
+  transform: rotate(180deg);
+}
+
+
+
+
+@media (max-width: 821px) {
+  .nav-buttons ul {
+    gap: 5em;
+  }  
+
+}
+
+
+
+
+
